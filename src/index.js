@@ -3,6 +3,12 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './assets/fonts/ClashDisplay/ClashDisplay-Semibold.ttf'
+import './assets/fonts/ClashDisplay/ClashDisplay-Light.ttf'
+import './assets/fonts/ClashDisplay/ClashDisplay-Regular.ttf'
+import './assets/fonts/Satoshi/Satoshi-Variable.ttf'
+import './assets/fonts/Satoshi/Satoshi-Regular.ttf'
+import './assets/fonts/StixFonts/STIXTwoText-Bold.ttf'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

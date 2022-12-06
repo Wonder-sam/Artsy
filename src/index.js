@@ -1,19 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { RouterProvider } from 'react-router-dom';
 import './assets/fonts/ClashDisplay/ClashDisplay-Semibold.ttf'
+import './assets/fonts/ClashDisplay/ClashDisplay-Bold.ttf'
 import './assets/fonts/ClashDisplay/ClashDisplay-Light.ttf'
 import './assets/fonts/ClashDisplay/ClashDisplay-Regular.ttf'
 import './assets/fonts/Satoshi/Satoshi-Variable.ttf'
 import './assets/fonts/Satoshi/Satoshi-Regular.ttf'
 import './assets/fonts/StixFonts/STIXTwoText-Bold.ttf'
+import router from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router ={router} />
   </React.StrictMode>
 );
 

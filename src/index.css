@@ -18,6 +18,11 @@
   font-weight: 600;
 }
 @font-face {
+  font-family: 'ClashDisplayBold';
+  src: local("ClashDisplayBold"), url("./assets/fonts/ClashDisplay/ClashDisplay-Bold.ttf") format('truetype');
+  font-weight: bold;
+}
+@font-face {
   font-family: 'SatoshiVariable';
   src: local("SatoshiVariable"), url("./assets/fonts/Satoshi/Satoshi-Variable.ttf") format('truetype');
   font-weight: 500;

@@ -34,7 +34,7 @@ export const DisplayProducts = [
     },
     {
         id: 1,
-        productName: "The Boolean Egyptian",
+        productName: "Are We There Yet",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus"+
         "venenatis, lectus magna fringilla urna, porttitor rhoncus dolor pur",
         image: egyptian,
@@ -58,7 +58,7 @@ export const DisplayProducts = [
     },
     {
         id: 2,
-        productName: "The Boolean Egyptian",
+        productName: "Oloibiri 1997",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus"+
         "venenatis, lectus magna fringilla urna, porttitor rhoncus dolor pur",
         image: egypt,

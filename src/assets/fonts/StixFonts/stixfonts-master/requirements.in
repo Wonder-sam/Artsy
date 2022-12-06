@@ -1,6 +1,0 @@
-fonttools[woff]
-fontmake[pathops]
-cffsubr
-psautohint
-ttfautohint-py
-ufoLib2

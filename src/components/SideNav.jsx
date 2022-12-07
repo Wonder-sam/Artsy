@@ -14,20 +14,42 @@ export default function SideNav(){
         let head = document.getElementsByClassName('menuBody').item(num)
         if(head.classList.contains('h-40')){
             head.classList.replace('h-40', 'h-0')
+            document.getElementsByClassName('catArrow').item(0).classList.add('hidden')
+            document.getElementsByClassName('catArrow').item(1).classList.remove('hidden')
         }
-        else(
+        else{
             head.classList.replace('h-0', 'h-40')
-        )
+            document.getElementsByClassName('catArrow').item(0).classList.remove('hidden')
+            document.getElementsByClassName('catArrow').item(1).classList.add('hidden')
+        }
     }
 
     const togglePrice=(num)=>{
         let head = document.getElementsByClassName('menuBody').item(num)
         if(head.classList.contains('h-24')){
             head.classList.replace('h-24', 'h-0')
+            document.getElementsByClassName('priceArrow').item(0).classList.add('hidden')
+            document.getElementsByClassName('priceArrow').item(1).classList.remove('hidden')
         }
-        else(
+        else{
             head.classList.replace('h-0', 'h-24')
-        )
+            document.getElementsByClassName('priceArrow').item(0).classList.remove('hidden')
+            document.getElementsByClassName('priceArrow').item(1).classList.add('hidden')
+        }
+    }
+
+    const toggleArtist=(num)=>{
+        let head = document.getElementsByClassName('menuBody').item(num)
+        if(head.classList.contains('h-44')){
+            head.classList.replace('h-44', 'h-0')
+            document.getElementsByClassName('artArrow').item(0).classList.add('hidden')
+            document.getElementsByClassName('artArrow').item(1).classList.remove('hidden')
+        }
+        else{
+            head.classList.replace('h-0', 'h-44')
+            document.getElementsByClassName('artArrow').item(0).classList.remove('hidden')
+            document.getElementsByClassName('artArrow').item(1).classList.add('hidden')
+        }
     }
 
     return(
@@ -57,8 +79,11 @@ export default function SideNav(){
                 <div onClick={()=>toggleCategory(0)} className="font-[SatoshiVariable] flex justify-between items-center" >
                     <span className="text-xl">By category</span>
                     <span>
-                        <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg className="catArrow" width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0.352185 8.65584C0.577756 8.87621 0.883656 9 1.20262 9C1.52157 9 1.82747 8.87621 2.05305 8.65584L8.00726 2.83731L13.9615 8.65584C14.1883 8.86996 14.4922 8.98844 14.8076 8.98576C15.123 8.98308 15.4247 8.85946 15.6477 8.64152C15.8707 8.42358 15.9972 8.12876 16 7.82056C16.0027 7.51236 15.8815 7.21543 15.6623 6.99374L8.85769 0.344158C8.63212 0.123794 8.32622 0 8.00726 0C7.6883 0 7.3824 0.123794 7.15683 0.344158L0.352185 6.99374C0.126681 7.21417 0 7.5131 0 7.82479C0 8.13648 0.126681 8.43541 0.352185 8.65584Z" fill="#2F2F2F"/>
+                        </svg>
+                        <svg className="catArrow hidden" width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.352185 0.344159C0.577756 0.123794 0.883656 0 1.20262 0C1.52157 0 1.82747 0.123794 2.05305 0.344159L8.00726 6.16269L13.9615 0.344159C14.1883 0.130039 14.4922 0.0115592 14.8076 0.0142373C15.123 0.0169155 15.4247 0.140538 15.6477 0.358478C15.8707 0.576418 15.9972 0.871238 16 1.17944C16.0027 1.48764 15.8815 1.78457 15.6623 2.00626L8.85769 8.65584C8.63212 8.87621 8.32622 9 8.00726 9C7.6883 9 7.3824 8.87621 7.15683 8.65584L0.352185 2.00626C0.126681 1.78583 0 1.4869 0 1.17521C0 0.863519 0.126681 0.564591 0.352185 0.344159Z" fill="#2F2F2F"/>
                         </svg>
                     </span>
                 </div>
@@ -109,8 +134,11 @@ export default function SideNav(){
                 <div onClick={()=>togglePrice(1)} className="font-[SatoshiVariable] flex justify-between items-center">
                     <span className="text-xl">By price</span>
                     <span>
-                        <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg className="priceArrow" width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0.352185 8.65584C0.577756 8.87621 0.883656 9 1.20262 9C1.52157 9 1.82747 8.87621 2.05305 8.65584L8.00726 2.83731L13.9615 8.65584C14.1883 8.86996 14.4922 8.98844 14.8076 8.98576C15.123 8.98308 15.4247 8.85946 15.6477 8.64152C15.8707 8.42358 15.9972 8.12876 16 7.82056C16.0027 7.51236 15.8815 7.21543 15.6623 6.99374L8.85769 0.344158C8.63212 0.123794 8.32622 0 8.00726 0C7.6883 0 7.3824 0.123794 7.15683 0.344158L0.352185 6.99374C0.126681 7.21417 0 7.5131 0 7.82479C0 8.13648 0.126681 8.43541 0.352185 8.65584Z" fill="#2F2F2F"/>
+                        </svg>
+                        <svg className="priceArrow hidden" width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.352185 0.344159C0.577756 0.123794 0.883656 0 1.20262 0C1.52157 0 1.82747 0.123794 2.05305 0.344159L8.00726 6.16269L13.9615 0.344159C14.1883 0.130039 14.4922 0.0115592 14.8076 0.0142373C15.123 0.0169155 15.4247 0.140538 15.6477 0.358478C15.8707 0.576418 15.9972 0.871238 16 1.17944C16.0027 1.48764 15.8815 1.78457 15.6623 2.00626L8.85769 8.65584C8.63212 8.87621 8.32622 9 8.00726 9C7.6883 9 7.3824 8.87621 7.15683 8.65584L0.352185 2.00626C0.126681 1.78583 0 1.4869 0 1.17521C0 0.863519 0.126681 0.564591 0.352185 0.344159Z" fill="#2F2F2F"/>
                         </svg>
                     </span>
                 </div>
@@ -137,47 +165,46 @@ export default function SideNav(){
                     </ul>
                 </div>
             </div>
-            <table className="w-full mt-8">
-                <thead className="font-[SatoshiVariable] pb-16">
-                    <tr><th className="flex justify-between items-center">
-                        <span className="text-xl">By artist</span>
-                        <span>
-                            <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.352185 8.65584C0.577756 8.87621 0.883656 9 1.20262 9C1.52157 9 1.82747 8.87621 2.05305 8.65584L8.00726 2.83731L13.9615 8.65584C14.1883 8.86996 14.4922 8.98844 14.8076 8.98576C15.123 8.98308 15.4247 8.85946 15.6477 8.64152C15.8707 8.42358 15.9972 8.12876 16 7.82056C16.0027 7.51236 15.8815 7.21543 15.6623 6.99374L8.85769 0.344158C8.63212 0.123794 8.32622 0 8.00726 0C7.6883 0 7.3824 0.123794 7.15683 0.344158L0.352185 6.99374C0.126681 7.21417 0 7.5131 0 7.82479C0 8.13648 0.126681 8.43541 0.352185 8.65584Z" fill="#2F2F2F"/>
-                            </svg>
-                        </span>
-                    </th>
-                    </tr>
-                    <tr className="h-[1.5rem]"></tr>
-                </thead>
-                <tbody className="font-[SatoshiRegular]">     
-                    <tr className="h-[2rem]">
-                        <td>
+            <div className="w-full mt-8">
+                <div onClick={()=>toggleArtist(2)} className="font-[SatoshiVariable] flex justify-between items-center">
+                    <span className="text-xl">By artist</span>
+                    <span>
+                        <svg className="artArrow" width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.352185 8.65584C0.577756 8.87621 0.883656 9 1.20262 9C1.52157 9 1.82747 8.87621 2.05305 8.65584L8.00726 2.83731L13.9615 8.65584C14.1883 8.86996 14.4922 8.98844 14.8076 8.98576C15.123 8.98308 15.4247 8.85946 15.6477 8.64152C15.8707 8.42358 15.9972 8.12876 16 7.82056C16.0027 7.51236 15.8815 7.21543 15.6623 6.99374L8.85769 0.344158C8.63212 0.123794 8.32622 0 8.00726 0C7.6883 0 7.3824 0.123794 7.15683 0.344158L0.352185 6.99374C0.126681 7.21417 0 7.5131 0 7.82479C0 8.13648 0.126681 8.43541 0.352185 8.65584Z" fill="#2F2F2F"/>
+                        </svg>
+                        <svg className="artArrow hidden" width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.352185 0.344159C0.577756 0.123794 0.883656 0 1.20262 0C1.52157 0 1.82747 0.123794 2.05305 0.344159L8.00726 6.16269L13.9615 0.344159C14.1883 0.130039 14.4922 0.0115592 14.8076 0.0142373C15.123 0.0169155 15.4247 0.140538 15.6477 0.358478C15.8707 0.576418 15.9972 0.871238 16 1.17944C16.0027 1.48764 15.8815 1.78457 15.6623 2.00626L8.85769 8.65584C8.63212 8.87621 8.32622 9 8.00726 9C7.6883 9 7.3824 8.87621 7.15683 8.65584L0.352185 2.00626C0.126681 1.78583 0 1.4869 0 1.17521C0 0.863519 0.126681 0.564591 0.352185 0.344159Z" fill="#2F2F2F"/>
+                        </svg>
+                    </span>
+                </div>
+                <div className="menuBody h-44 font-[SatoshiRegular] mt-4 transition-[height] duration-[500ms]">     
+                    <ul className="h-[2rem]">
+                        <li>
                             <span className="text-base underline">All</span>
-                        </td>
-                    </tr>
-                    <tr className="h-[2rem]">
-                        <td>
+                        </li>
+                    </ul>
+                    <ul className="h-[2rem]">
+                        <li>
                             <span className="text-base">Below $100.00</span>
-                        </td>
-                    </tr>
-                    <tr className="h-[2rem]">
-                        <td>
+                        </li>
+                    </ul>
+                    <ul className="h-[2rem]">
+                        <li>
                             <span className="text-base">$100.00 - $150.00</span>
-                        </td>
-                    </tr>
-                    <tr className="h-[2rem]">
-                        <td>
+                        </li>
+                    </ul>
+                    <ul className="h-[2rem]">
+                        <li>
                             <span className="text-base">$150.00 - $200.00</span>
-                        </td>
-                    </tr>
-                    <tr className="h-[2rem]">
-                        <td>
+                        </li>
+                    </ul>
+                    <ul className="h-[2rem]">
+                        <li>
                             <span className="text-base">Above $200.00</span>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     )
 }

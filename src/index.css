@@ -33,6 +33,11 @@
   font-weight: 400;
 }
 @font-face {
+  font-family: 'SatoshiBold';
+  src: local("SatoshiBold"), url("./assets/fonts/Satoshi/Satoshi-Bold.ttf") format('truetype');
+  font-weight: 700;
+}
+@font-face {
   font-family: 'STIXTwoTextBold';
   src: local("STIXTwoTextBold"), url("./assets/fonts/StixFonts/STIXTwoText-Bold.ttf") format('truetype');
   font-weight: bold;

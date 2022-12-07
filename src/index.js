@@ -9,6 +9,7 @@ import './assets/fonts/ClashDisplay/ClashDisplay-Light.ttf'
 import './assets/fonts/ClashDisplay/ClashDisplay-Regular.ttf'
 import './assets/fonts/Satoshi/Satoshi-Variable.ttf'
 import './assets/fonts/Satoshi/Satoshi-Regular.ttf'
+import './assets/fonts/Satoshi/Satoshi-Bold.ttf'
 import './assets/fonts/StixFonts/STIXTwoText-Bold.ttf'
 import router from './App';
 

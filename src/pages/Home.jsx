@@ -65,14 +65,14 @@ export default class Home extends React.Component{
         return (
             <div>
                 <div className="w-full">
-                    <h1 className='container mx-auto text-[7vw] sm:text-[5vw] mb-[8%] font-[ClashDisplaySemiBold] text-center leading-relaxed'>
-                    Photography is poetry <span className='hidden sm:inline'>&</span><span className='sm:hidden'>and</span><br/> beautiful untold stories
+                    <h1 className='container mx-auto text-[7vw] sm:text-[5vw] mb-4 font-[ClashDisplaySemiBold] text-center leading-relaxed'>
+                        Photography is poetry <span className='hidden sm:inline'>&</span><span className='sm:hidden'>and</span><br/> beautiful untold stories
                     </h1>
-                    <div className='relative mb-[4%] sm:mb-0'>
-                    <h5 className='container mx-auto w-[85%] sm:w-[50%] text-center font-[SatoshiVariable]'>
-                    Flip through more than 10,000 vintage shots, old photographs, historic images and captures seamlessly in one place.
-                    Register to get top access.
-                    </h5>
+                    <div className='relative mb-4 sm:mb-0'>
+                        <h5 className='container mx-auto w-[85%] sm:w-[50%] text-center font-[SatoshiVariable]'>
+                            Flip through more than 10,000 vintage shots, old photographs, historic images and captures seamlessly in one place.
+                            Register to get top access.
+                        </h5>
                     </div>
                 </div>
                 <div className='w-full hidden sm:flex h-96 overflow-hidden flex flex-row flex-nowrap mb-32 justify-start' >

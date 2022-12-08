@@ -53,16 +53,16 @@ export default function SideNav(){
     }
 
     return(
-        <div className="w-full">
-            <div className="relative mb-11 xl:mb-16">
-                <span className="absolute inset-y-0 left-0 flex items-center pl-4">
+        <div className="w-[80%] sm:w-[100%]">
+            <div className="relative mb-11 sm:mb-6 lg:mb-11 xl:mb-16">
+                <span className="sm:hidden absolute inset-y-0 left-0 flex items-center pl-4">
                     <svg className="w-5" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M11.9741 23.947C14.6309 23.9464 17.211 23.0571 19.3038 21.4206L25.8836 28L28 25.8837L21.4202 19.3043C23.0577 17.2114 23.9476 14.6308 23.9483 11.9735C23.9483 5.37161 18.5764 0 11.9741 0C5.37189 0 0 5.37161 0 11.9735C0 18.5754 5.37189 23.947 11.9741 23.947ZM11.9741 2.99337C16.9269 2.99337 20.9547 7.02095 20.9547 11.9735C20.9547 16.926 16.9269 20.9536 11.9741 20.9536C7.02133 20.9536 2.99353 16.926 2.99353 11.9735C2.99353 7.02095 7.02133 2.99337 11.9741 2.99337Z" fill="#999999"/>
                     </svg>
                 </span>
                 <input type="text" placeholder="Search" 
                     className="bg-[#F4F2F2] h-[2rem] xl:h-[2.5rem] w-[100%] rounded-lg placeholder:text-[#999999] placeholder:font-[SatoshiVariable] 
-                        placeholder:uppercase placeholder:text-center placeholder:text-base shadow-md]"
+                        placeholder:uppercase placeholder:text-center placeholder:text-base sm:placeholder:text-sm lg:placeholder:text-base shadow-md]"
                 />
             </div>
             <div className="py-2">
@@ -77,7 +77,7 @@ export default function SideNav(){
 
             <div className="w-full mt-8">
                 <div onClick={()=>toggleCategory(0)} className="font-[SatoshiVariable] flex justify-between items-center" >
-                    <span className="text-xl">By category</span>
+                    <span className="text-xl sm:text-base lg:text-xl">By category</span>
                     <span>
                         <svg className="catArrow" width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0.352185 8.65584C0.577756 8.87621 0.883656 9 1.20262 9C1.52157 9 1.82747 8.87621 2.05305 8.65584L8.00726 2.83731L13.9615 8.65584C14.1883 8.86996 14.4922 8.98844 14.8076 8.98576C15.123 8.98308 15.4247 8.85946 15.6477 8.64152C15.8707 8.42358 15.9972 8.12876 16 7.82056C16.0027 7.51236 15.8815 7.21543 15.6623 6.99374L8.85769 0.344158C8.63212 0.123794 8.32622 0 8.00726 0C7.6883 0 7.3824 0.123794 7.15683 0.344158L0.352185 6.99374C0.126681 7.21417 0 7.5131 0 7.82479C0 8.13648 0.126681 8.43541 0.352185 8.65584Z" fill="#2F2F2F"/>
@@ -93,7 +93,7 @@ export default function SideNav(){
                             <span>
                                 <input type="checkbox" name="editorials" value="editorials" className="mr-2" />
                             </span>
-                            <span className="text-base">Editorials</span>
+                            <span className="text-base sm:text-sm lg:text-base">Editorials</span>
                         </li>
                     </ul>
                     <ul className="h-[2rem]">
@@ -101,7 +101,7 @@ export default function SideNav(){
                             <span>
                                 <input type="checkbox" name="fashion" value="fashion" className="mr-2" />
                             </span>
-                            <span className="text-base">Fashion</span>
+                            <span className="text-base sm:text-sm lg:text-base">Fashion</span>
                         </li>
                     </ul>
                     <ul className="h-[2rem]">
@@ -109,7 +109,7 @@ export default function SideNav(){
                             <span>
                                 <input type="checkbox" name="optics" value="optics" className="mr-2" />
                             </span>
-                            <span className="text-base">Optics</span>
+                            <span className="text-base sm:text-sm lg:text-base">Optics</span>
                         </li>
                     </ul>
                     <ul className="h-[2rem]">
@@ -117,7 +117,7 @@ export default function SideNav(){
                             <span>
                                 <input type="checkbox" name="museum" value="museum" className="mr-2" />
                             </span>
-                            <span className="text-base">Art & Museum</span>
+                            <span className="text-base sm:text-sm lg:text-base">Art & Museum</span>
                         </li>
                     </ul>
                     <ul className="h-[2rem]">
@@ -125,14 +125,14 @@ export default function SideNav(){
                             <span>
                                 <input type="checkbox" name="nature" value="nature" className="mr-2" />
                             </span>
-                            <span className="text-base">Nature</span>
+                            <span className="text-base sm:text-sm lg:text-base">Nature</span>
                         </li>
                     </ul>
                 </div>
             </div>
             <div className="w-full mt-4">
                 <div onClick={()=>togglePrice(1)} className="font-[SatoshiVariable] flex justify-between items-center">
-                    <span className="text-xl">By price</span>
+                    <span className="text-xl sm:text-base lg:text-xl">By price</span>
                     <span>
                         <svg className="priceArrow" width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0.352185 8.65584C0.577756 8.87621 0.883656 9 1.20262 9C1.52157 9 1.82747 8.87621 2.05305 8.65584L8.00726 2.83731L13.9615 8.65584C14.1883 8.86996 14.4922 8.98844 14.8076 8.98576C15.123 8.98308 15.4247 8.85946 15.6477 8.64152C15.8707 8.42358 15.9972 8.12876 16 7.82056C16.0027 7.51236 15.8815 7.21543 15.6623 6.99374L8.85769 0.344158C8.63212 0.123794 8.32622 0 8.00726 0C7.6883 0 7.3824 0.123794 7.15683 0.344158L0.352185 6.99374C0.126681 7.21417 0 7.5131 0 7.82479C0 8.13648 0.126681 8.43541 0.352185 8.65584Z" fill="#2F2F2F"/>
@@ -145,7 +145,7 @@ export default function SideNav(){
                 <div className="menuBody mt-8 font-[SatoshiRegular] h-24 overflow-hidden transition-[height] duration-[500ms]">     
                     <ul className="h-[2rem]">
                         <li>
-                            <span className="text-base">${parseFloat(minValue).toFixed(2)} - ${parseFloat(maxValue).toFixed(2)}</span>
+                            <span className="text-xl sm:text-sm lg:text-xl">${parseFloat(minValue).toFixed(2)} - ${parseFloat(maxValue).toFixed(2)}</span>
                         </li>
                     </ul>
                     <ul className="h-[2rem]">
@@ -167,7 +167,7 @@ export default function SideNav(){
             </div>
             <div className="w-full mt-8">
                 <div onClick={()=>toggleArtist(2)} className="font-[SatoshiVariable] flex justify-between items-center">
-                    <span className="text-xl">By artist</span>
+                    <span className="text-xl sm:text-base lg:text-xl">By artist</span>
                     <span>
                         <svg className="artArrow" width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0.352185 8.65584C0.577756 8.87621 0.883656 9 1.20262 9C1.52157 9 1.82747 8.87621 2.05305 8.65584L8.00726 2.83731L13.9615 8.65584C14.1883 8.86996 14.4922 8.98844 14.8076 8.98576C15.123 8.98308 15.4247 8.85946 15.6477 8.64152C15.8707 8.42358 15.9972 8.12876 16 7.82056C16.0027 7.51236 15.8815 7.21543 15.6623 6.99374L8.85769 0.344158C8.63212 0.123794 8.32622 0 8.00726 0C7.6883 0 7.3824 0.123794 7.15683 0.344158L0.352185 6.99374C0.126681 7.21417 0 7.5131 0 7.82479C0 8.13648 0.126681 8.43541 0.352185 8.65584Z" fill="#2F2F2F"/>
@@ -185,22 +185,22 @@ export default function SideNav(){
                     </ul>
                     <ul className="h-[2rem]">
                         <li>
-                            <span className="text-base">Below $100.00</span>
+                            <span className="text-xl sm:text-sm lg:text-xl">Below $100.00</span>
                         </li>
                     </ul>
                     <ul className="h-[2rem]">
                         <li>
-                            <span className="text-base">$100.00 - $150.00</span>
+                            <span className="text-xl sm:text-sm lg:text-xl">$100.00 - $150.00</span>
                         </li>
                     </ul>
                     <ul className="h-[2rem]">
                         <li>
-                            <span className="text-base">$150.00 - $200.00</span>
+                            <span className="text-xl sm:text-sm lg:text-xl">$150.00 - $200.00</span>
                         </li>
                     </ul>
                     <ul className="h-[2rem]">
                         <li>
-                            <span className="text-base">Above $200.00</span>
+                            <span className="text-xl sm:text-sm lg:text-xl">Above $200.00</span>
                         </li>
                     </ul>
                 </div>

@@ -4,6 +4,15 @@ import { createBrowserRouter, redirect } from 'react-router-dom';
 import Home from './pages/Home';
 import Header from './components/Header';
 import { Marketplace } from './pages/MarketPlace';
+import { MarketData } from './dataset/marketData';
+import Product from './pages/Product';
+
+async function getProducts() {
+  return MarketData
+}
+async function getProduct(num) {
+  return MarketData[num]
+}
 
 const router = createBrowserRouter([
       {
@@ -18,12 +27,19 @@ const router = createBrowserRouter([
           },
           {
             path: "Home",
-            element: <Home />
+            element: <Home />,
           },
           {
             path: "Marketplace",
-            element: <Marketplace />
+            element: <Marketplace />,
+            loader: getProducts
+          },
+          {
+            path: "Marketplace/:productId",
+            element: <Product />,
+            loader: ({params})=> getProduct(params.productId)
           }
+
         ]
       }
     ])

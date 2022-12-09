@@ -7,6 +7,9 @@ import veil from './../assets/images/viel.svg'
 import alternating from './../assets/images/alternating.svg'
 import rosemary from './../assets/images/rosemary.svg'
 import beverly from './../assets/images/beverly.svg'
+import sassy from './../assets/images/skinColor.svg'
+import girl from './../assets/images/girl.svg'
+import flower from './../assets/images/leaf.svg'
 
 
 export const MarketData = [
@@ -64,4 +67,22 @@ export const MarketData = [
         image: beverly,
         price: 3.9
     },
+    {
+        id: 9,
+        name: "Sassy",
+        image: sassy,
+        price: 3.9
+    },
+    {
+        id: 10,
+        name: 'Escape',
+        image: girl,
+        price: 3.2
+    },
+    {
+        id: 11,
+        name: 'Wither',
+        image: flower,
+        price: 4.8
+    }
 ]

@@ -59,6 +59,7 @@ export default function Home() {
             pos=pos%3
             
         }, 4000)
+        window.scrollTo(0,0)
     })
 
     return (

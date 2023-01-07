@@ -11,6 +11,7 @@ import './assets/fonts/Satoshi/Satoshi-Variable.ttf'
 import './assets/fonts/Satoshi/Satoshi-Regular.ttf'
 import './assets/fonts/Satoshi/Satoshi-Bold.ttf'
 import './assets/fonts/StixFonts/STIXTwoText-Bold.ttf'
+import './assets/fonts/StixFonts/STIXTwoText-Medium.ttf'
 import router from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

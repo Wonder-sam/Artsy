@@ -9,6 +9,7 @@ import Product from './pages/Product';
 import Auction from './pages/Auction';
 import LiveBid from './pages/LiveBid';
 import { auctionData } from './dataset/auctionData';
+import ErrorPage from './pages/error-page';
 
 async function getProducts() {
   return MarketData
@@ -24,14 +25,20 @@ async function getAuction(num) {
 const router = createBrowserRouter([
       {
         path: "/",
+        loader: ()=>redirect('/Artsy'),
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: "/Artsy",
         element: <Header />,
         loader: getProducts,
+        errorElement: <ErrorPage />,
         
         children: [
           {
             index: true,
             element: <Home />,
-            loader: ()=>redirect('/Home'),
+            loader: ()=>redirect('/Artsy/Home'),
           },
           {
             path: "Home",

@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react';
-import { createBrowserRouter, redirect } from 'react-router-dom';
+import { createBrowserRouter, redirect, createHashRouter } from 'react-router-dom';
 import Home from './pages/Home';
 import Header from './components/Header';
 import { Marketplace } from './pages/MarketPlace';
@@ -22,50 +22,49 @@ async function getAuction(num) {
   return auctionData[num]
 }
 
-const router = createBrowserRouter([
-      {
-        path: "/",
-        loader: ()=>redirect('/Artsy'),
-        errorElement: <ErrorPage />,
-      },
-      {
-        path: "/Artsy",
-        element: <Header />,
-        loader: getProducts,
-        errorElement: <ErrorPage />,
-        
-        children: [
-          {
-            index: true,
-            element: <Home />,
-            loader: ()=>redirect('/Artsy/Home'),
-          },
-          {
-            path: "Home",
-            element: <Home />,
-          },
-          {
-            path: "Marketplace",
-            element: <Marketplace />,
-            loader: getProducts
-          },
-          {
-            path: "Marketplace/:productId",
-            element: <Product />,
-            loader: ({params})=> getProduct(params.productId)
-          },
-          {
-            path: "Auctions",
-            element: <Auction />
-          },
-          {
-            path: "Auctions/:auctionId",
-            element: <LiveBid />,
-            loader: ({params})=> getAuction(params.auctionId)
-          },
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <Header />,
+      loader: getProducts,
+      errorElement: <ErrorPage />,
+      
+      children: [
+        {
+          index: true,
+          element: <Home />,
+          loader: ()=>redirect('Home'),
+        },
+        {
+          path: "Home",
+          element: <Home />,
+        },
+        {
+          path: "Marketplace",
+          element: <Marketplace />,
+          loader: getProducts
+        },
+        {
+          path: "Marketplace/:productId",
+          element: <Product />,
+          loader: ({params})=> getProduct(params.productId)
+        },
+        {
+          path: "Auctions",
+          element: <Auction />
+        },
+        {
+          path: "Auctions/:auctionId",
+          element: <LiveBid />,
+          loader: ({params})=> getAuction(params.auctionId)
+        },
 
-        ]
-      }
-    ])
+      ]
+    }
+  ],
+  
+  {basename: "/Artsy"}
+)
 
 export default router;

@@ -14,15 +14,28 @@ import manbeard from './../assets/images/manbeard.svg'
 import mandown from './../assets/images/mandown.svg'
 
 export default function Home() {
+    const girll = React.useRef(null);
+    const leaff = React.useRef(null);
+    const kang = React.useRef(null);
+    const ber = React.useRef(null);
+    const firstbox = React.useRef(null);
+    const secondbox = React.useRef(null);
+    const thirdbox = React.useRef(null);
+    const fourthbox = React.useRef(null);
+    const fifthbox = React.useRef(null);
+
     React.useEffect(()=>{
-        var carousel = document.querySelectorAll('.carousel');
-        carousel.item(1).querySelectorAll('.leaf').item(0).scrollIntoView();
-        carousel.item(2).querySelectorAll('.girl').item(0).scrollIntoView();
-        carousel.item(3).querySelectorAll('.kangaroo').item(0).scrollIntoView();
-        carousel.item(4).querySelectorAll('.berry').item(0).scrollIntoView();
-        for(let i=0; i<carousel.length; i++){
-        carousel.item(i).classList.add("scroll-smooth")
-        }
+        secondbox.current.scrollLeft=leaff.current.offsetLeft;
+        thirdbox.current.scrollLeft = girll.current.offsetLeft;
+        fourthbox.current.scrollLeft = kang.current.offsetLeft;
+        fifthbox.current.scrollLeft = ber.current.offsetLeft;
+
+        firstbox.current.classList.add("scroll-smooth");
+        secondbox.current.classList.add("scroll-smooth");
+        thirdbox.current.classList.add("scroll-smooth");
+        fourthbox.current.classList.add("scroll-smooth");
+        fifthbox.current.classList.add("scroll-smooth");
+
         var pos = 0;
         var cos = 0;
         var onelefts = []
@@ -39,11 +52,11 @@ export default function Home() {
     
         
         setInterval(()=>{
-        carousel.item(0).scrollLeft = onelefts[(cos)%5];
-        carousel.item(1).scrollLeft = twolefts[(cos+1)%5];
-        carousel.item(2).scrollLeft = twolefts[(cos+2)%5];
-        carousel.item(3).scrollLeft = twolefts[(cos+3)%5];
-        carousel.item(4).scrollLeft = twolefts[(cos+4)%5];
+        firstbox.current.scrollLeft = onelefts[(cos)%5];
+        secondbox.current.scrollLeft = twolefts[(cos+1)%5];
+        thirdbox.current.scrollLeft = twolefts[(cos+2)%5];
+        fourthbox.current.scrollLeft = twolefts[(cos+3)%5];
+        fifthbox.current.scrollLeft = twolefts[(cos+4)%5];
         cos++
         }, 2000)
 
@@ -59,7 +72,6 @@ export default function Home() {
             pos=pos%3
             
         }, 4000)
-        window.scrollTo(0,0)
     })
 
     return (
@@ -76,40 +88,40 @@ export default function Home() {
                 </div>
             </div>
             <div className='w-full hidden sm:flex h-96 overflow-hidden flex flex-row flex-nowrap mb-32 justify-start' >
-                <div className="carousel w-1/5 flex flex-none flex-row flex-nowrap overflow-hidden mr-4 -ml-16 mt-24">
+                <div ref={firstbox} className="carousel w-1/5 flex flex-none flex-row flex-nowrap overflow-hidden mr-4 -ml-16 mt-24">
                 <img src={boy} className="onecarouselImg inline-block mr-4" alt="" />
                 <img src={leaf} className="onecarouselImg inline-block mr-4" alt=""/>
                 <img src={girl} className="onecarouselImg inline-block mr-4" alt=""/>
                 <img src={kangaroo} className="onecarouselImg inline-block mr-4" alt=""/>
                 <img src={berry} className="onecarouselImg inline-block mr-4" alt=""/>
                 </div>
-                <div className="carousel relative w-1/5 flex flex-none flex-row flex-nowrap overflow-hidden mr-4 mt-16">
+                <div ref={secondbox} className="carousel relative w-1/5 flex flex-none flex-row flex-nowrap overflow-hidden mr-4 mt-16">
                 <img src={boy} className="twocarouselImg inline-block  mr-4" alt=""/>
-                <img src={leaf} className="twocarouselImg inline-block mr-4 leaf" alt=""/>
+                <img src={leaf}ref={leaff} className="twocarouselImg inline-block mr-4 leaf" alt=""/>
                 <img src={girl} className="twocarouselImg inline-block mr-4" alt=""/>
                 <img src={kangaroo} className="twocarouselImg inline-block mr-4" alt=""/>
                 <img src={berry} className="twocarouselImg inline-block mr-4" alt=""/>
                 </div>
-                <div className="carousel relative w-1/5 flex flex-none flex-row flex-nowrap overflow-hidden mr-4 mt-8">
+                <div ref={thirdbox} className="carousel relative w-1/5 flex flex-none flex-row flex-nowrap overflow-hidden mr-4 mt-8">
                 <img src={boy} className="threecarouselImg inline-block mr-4" alt=""/>
                 <img src={leaf} className="threecarouselImg inline-block mr-4" alt=""/>
-                <img src={girl} className="threecarouselImg inline-block mr-4 girl" alt=""/>
+                <img src={girl} ref={girll} className="threecarouselImg inline-block mr-4 girl" alt=""/>
                 <img src={kangaroo} className="threecarouselImg inline-block mr-4" alt=""/>
                 <img src={berry} className="threecarouselImg inline-block mr-4"  alt=""/>
                 </div>
-                <div className="carousel relative w-1/5 flex flex-none flex-row flex-nowrap overflow-hidden mr-4 mt-16">
+                <div ref={fourthbox} className="carousel relative w-1/5 flex flex-none flex-row flex-nowrap overflow-hidden mr-4 mt-16">
                 <img src={boy} className="fourcarouselImg inline-block mr-4" alt=""/>
                 <img src={leaf} className="fourcarouselImg inline-block mr-4" alt=""/>
                 <img src={girl} className="fourcarouselImg inline-block mr-4" alt=""/>
-                <img src={kangaroo} className="fourcarouselImg inline-block mr-4 kangaroo" alt=""/>
+                <img src={kangaroo} ref={kang} className="fourcarouselImg inline-block mr-4 kangaroo" alt=""/>
                 <img src={berry} className="fourcarouselImg inline-block mr-4" alt=""/>
                 </div>
-                <div className="carousel relative w-1/5 flex flex-none flex-row flex-nowrap overflow-hidden mr-4 mt-[4.25rem]">
+                <div ref={fifthbox} className="carousel relative w-1/5 flex flex-none flex-row flex-nowrap overflow-hidden mr-4 mt-[4.25rem]">
                 <img src={boy} className="fivecarouselImg inline-block mr-4" alt=""/>
                 <img src={leaf} className="fivecarouselImg inline-block mr-4" alt=""/>
                 <img src={girl} className="fivecarouselImg inline-block mr-4" alt=""/>
                 <img src={kangaroo} className="fivecarouselImg inline-block mr-4" alt=""/>
-                <img src={berry} className="fivecarouselImg inline-block mr-4 berry" alt=""/>
+                <img src={berry}  ref={ber} className="fivecarouselImg inline-block mr-4 berry" alt=""/>
                 </div>
             </div>
             <div className='w-full sm:hidden h-[23rem] mb-4 sm:mb-0 relative box-border'>

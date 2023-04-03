@@ -14,6 +14,7 @@ import './assets/fonts/StixFonts/STIXTwoText-Bold.ttf'
 import './assets/fonts/StixFonts/STIXTwoText-Medium.ttf'
 import router from './App';
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

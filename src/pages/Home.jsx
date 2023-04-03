@@ -23,9 +23,34 @@ export default function Home() {
     const thirdbox = React.useRef(null);
     const fourthbox = React.useRef(null);
     const fifthbox = React.useRef(null);
+    const boyImage1 = React.useRef(null);
+    const leafImage1 = React.useRef(null);
+    const girlImage1 = React.useRef(null);
+    const kangImage1 = React.useRef(null);
+    const berryImage1 = React.useRef(null);
+    const boyImage2 = React.useRef(null);
+    const girlImage2 = React.useRef(null);
+    const kangImage2 = React.useRef(null);
+    const berryImage2 = React.useRef(null);
+    const boyImage3 = React.useRef(null);
+    const leafImage3 = React.useRef(null);
+    const kangImage3 = React.useRef(null);
+    const berryImage3 = React.useRef(null);
+    const boyImage4 = React.useRef(null);
+    const leafImage4 = React.useRef(null);
+    const girlImage4 = React.useRef(null);
+    const berryImage4 = React.useRef(null);
+    const boyImage5 = React.useRef(null);
+    const leafImage5 = React.useRef(null);
+    const girlImage5 = React.useRef(null);
+    const kangImage5 = React.useRef(null);
+
 
     React.useEffect(()=>{
-        secondbox.current.scrollLeft=leaff.current.offsetLeft;
+        secondbox.current.scrollLeft = leaff.current.offsetLeft;
+        if(leaff.current.offsetLeft<50){
+            window.location.reload();
+        }
         thirdbox.current.scrollLeft = girll.current.offsetLeft;
         fourthbox.current.scrollLeft = kang.current.offsetLeft;
         fifthbox.current.scrollLeft = ber.current.offsetLeft;
@@ -41,13 +66,20 @@ export default function Home() {
         var onelefts = []
         var twolefts = []
         var images = document.querySelectorAll('.fadeImage');
-        var cimg = document.querySelectorAll('.onecarouselImg');
-        var timg = document.querySelectorAll('.twocarouselImg');
+        // var cimg = document.querySelectorAll('.onecarouselImg');
+        // var timg = document.querySelectorAll('.twocarouselImg');
 
-        for(let c=0; c<timg.length; c++){
-        onelefts.push(cimg.item(c).offsetLeft)
-        twolefts.push(timg.item(c).offsetLeft)
-        }
+      
+        onelefts.push(boyImage1.current.offsetLeft)
+        onelefts.push(leafImage1.current.offsetLeft)
+        onelefts.push(girlImage1.current.offsetLeft)
+        onelefts.push(kangImage1.current.offsetLeft)
+        onelefts.push(berryImage1.current.offsetLeft)
+        twolefts.push(boyImage2.current.offsetLeft)
+        twolefts.push(leaff.current.offsetLeft)
+        twolefts.push(girlImage2.current.offsetLeft)
+        twolefts.push(kangImage2.current.offsetLeft)
+        twolefts.push(berryImage2.current.offsetLeft)
         // let top = img.offsetLeft;
     
         
@@ -89,39 +121,39 @@ export default function Home() {
             </div>
             <div className='w-full hidden sm:flex h-96 overflow-hidden flex flex-row flex-nowrap mb-32 justify-start' >
                 <div ref={firstbox} className="carousel w-1/5 flex flex-none flex-row flex-nowrap overflow-hidden mr-4 -ml-16 mt-24">
-                <img src={boy} className="onecarouselImg inline-block mr-4" alt="" />
-                <img src={leaf} className="onecarouselImg inline-block mr-4" alt=""/>
-                <img src={girl} className="onecarouselImg inline-block mr-4" alt=""/>
-                <img src={kangaroo} className="onecarouselImg inline-block mr-4" alt=""/>
-                <img src={berry} className="onecarouselImg inline-block mr-4" alt=""/>
+                    <img src={boy} ref={boyImage1} className="inline-block mr-4" alt="" />
+                    <img src={leaf} ref={leafImage1} className="inline-block mr-4" alt=""/>
+                    <img src={girl} ref={girlImage1} className="inline-block mr-4" alt=""/>
+                    <img src={kangaroo} ref={kangImage1} className="inline-block mr-4" alt=""/>
+                    <img src={berry} ref={berryImage1} className="inline-block mr-4" alt=""/>
                 </div>
                 <div ref={secondbox} className="carousel relative w-1/5 flex flex-none flex-row flex-nowrap overflow-hidden mr-4 mt-16">
-                <img src={boy} className="twocarouselImg inline-block  mr-4" alt=""/>
-                <img src={leaf}ref={leaff} className="twocarouselImg inline-block mr-4 leaf" alt=""/>
-                <img src={girl} className="twocarouselImg inline-block mr-4" alt=""/>
-                <img src={kangaroo} className="twocarouselImg inline-block mr-4" alt=""/>
-                <img src={berry} className="twocarouselImg inline-block mr-4" alt=""/>
+                    <img src={boy} ref={boyImage2} className="inline-block  mr-4" alt=""/>
+                    <img src={leaf} ref={leaff} className="inline-block mr-4 leaf" alt=""/>
+                    <img src={girl} ref={girlImage2} className="inline-block mr-4" alt=""/>
+                    <img src={kangaroo} ref={kangImage2} className="inline-block mr-4" alt=""/>
+                    <img src={berry} ref={berryImage2} className="inline-block mr-4" alt=""/>
                 </div>
                 <div ref={thirdbox} className="carousel relative w-1/5 flex flex-none flex-row flex-nowrap overflow-hidden mr-4 mt-8">
-                <img src={boy} className="threecarouselImg inline-block mr-4" alt=""/>
-                <img src={leaf} className="threecarouselImg inline-block mr-4" alt=""/>
-                <img src={girl} ref={girll} className="threecarouselImg inline-block mr-4 girl" alt=""/>
-                <img src={kangaroo} className="threecarouselImg inline-block mr-4" alt=""/>
-                <img src={berry} className="threecarouselImg inline-block mr-4"  alt=""/>
+                    <img src={boy} ref={boyImage3} className="inline-block mr-4" alt=""/>
+                    <img src={leaf} ref={leafImage3} className="inline-block mr-4" alt=""/>
+                    <img src={girl} ref={girll} className="inline-block mr-4 girl" alt=""/>
+                    <img src={kangaroo} ref={kangImage3} className="inline-block mr-4" alt=""/>
+                    <img src={berry} ref={berryImage3} className="inline-block mr-4"  alt=""/>
                 </div>
                 <div ref={fourthbox} className="carousel relative w-1/5 flex flex-none flex-row flex-nowrap overflow-hidden mr-4 mt-16">
-                <img src={boy} className="fourcarouselImg inline-block mr-4" alt=""/>
-                <img src={leaf} className="fourcarouselImg inline-block mr-4" alt=""/>
-                <img src={girl} className="fourcarouselImg inline-block mr-4" alt=""/>
-                <img src={kangaroo} ref={kang} className="fourcarouselImg inline-block mr-4 kangaroo" alt=""/>
-                <img src={berry} className="fourcarouselImg inline-block mr-4" alt=""/>
+                    <img src={boy} ref={boyImage4} className="inline-block mr-4" alt=""/>
+                    <img src={leaf} ref={leafImage4} className="inline-block mr-4" alt=""/>
+                    <img src={girl} ref={girlImage4} className="inline-block mr-4" alt=""/>
+                    <img src={kangaroo} ref={kang} className="inline-block mr-4 kangaroo" alt=""/>
+                    <img src={berry} ref={berryImage4} className="inline-block mr-4" alt=""/>
                 </div>
                 <div ref={fifthbox} className="carousel relative w-1/5 flex flex-none flex-row flex-nowrap overflow-hidden mr-4 mt-[4.25rem]">
-                <img src={boy} className="fivecarouselImg inline-block mr-4" alt=""/>
-                <img src={leaf} className="fivecarouselImg inline-block mr-4" alt=""/>
-                <img src={girl} className="fivecarouselImg inline-block mr-4" alt=""/>
-                <img src={kangaroo} className="fivecarouselImg inline-block mr-4" alt=""/>
-                <img src={berry}  ref={ber} className="fivecarouselImg inline-block mr-4 berry" alt=""/>
+                    <img src={boy} ref={boyImage5} className="inline-block mr-4" alt=""/>
+                    <img src={leaf} ref={leafImage5} className="inline-block mr-4" alt=""/>
+                    <img src={girl} ref={girlImage5} className="inline-block mr-4" alt=""/>
+                    <img src={kangaroo} ref={kangImage5}className="inline-block mr-4" alt=""/>
+                    <img src={berry}  ref={ber} className="inline-block mr-4 berry" alt=""/>
                 </div>
             </div>
             <div className='w-full sm:hidden h-[23rem] mb-4 sm:mb-0 relative box-border'>

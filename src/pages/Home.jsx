@@ -44,17 +44,30 @@ export default function Home() {
     const leafImage5 = React.useRef(null);
     const girlImage5 = React.useRef(null);
     const kangImage5 = React.useRef(null);
+    const [width, setWidth] = React.useState(window.innerWidth);
 
+    const updateDimension =()=>{
+        setWidth(window.innerWidth)
+        if(width >= 640 || leaff.current.offsetLeft<50){
+            window.location.reload();
+        }
+        console.log(width)
+        console.log(leaff.current.offsetLeft)
+    }
+
+    React.useEffect(()=>{
+        window.addEventListener("resize", updateDimension);
+        return () => window.removeEventListener("resize", updateDimension)
+    })
 
     React.useEffect(()=>{
         secondbox.current.scrollLeft = leaff.current.offsetLeft;
-        if(leaff.current.offsetLeft<50){
-            window.location.reload();
-        }
         thirdbox.current.scrollLeft = girll.current.offsetLeft;
         fourthbox.current.scrollLeft = kang.current.offsetLeft;
         fifthbox.current.scrollLeft = ber.current.offsetLeft;
-
+        if(width >= 640 && leaff.current.offsetLeft<50){
+            window.location.reload();
+        }
         firstbox.current.classList.add("scroll-smooth");
         secondbox.current.classList.add("scroll-smooth");
         thirdbox.current.classList.add("scroll-smooth");
@@ -104,7 +117,8 @@ export default function Home() {
             pos=pos%3
             
         }, 4000)
-    })
+        
+    },[])
 
     return (
         <div>

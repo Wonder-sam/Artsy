@@ -55,10 +55,10 @@ export default function Home() {
         console.log(leaff.current.offsetLeft)
     }
 
-    React.useEffect(()=>{
-        window.addEventListener("resize", updateDimension);
-        return () => window.removeEventListener("resize", updateDimension)
-    })
+    // React.useEffect(()=>{
+    //     window.addEventListener("resize", updateDimension);
+    //     return () => window.removeEventListener("resize", updateDimension)
+    // })
 
     React.useEffect(()=>{
         secondbox.current.scrollLeft = leaff.current.offsetLeft;
@@ -118,7 +118,7 @@ export default function Home() {
             
         }, 4000)
         
-    },[])
+    },[width])
 
     return (
         <div>
